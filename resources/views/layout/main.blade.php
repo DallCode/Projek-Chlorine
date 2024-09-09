@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="{{ asset('mazer/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.css')}}">
     <link rel="stylesheet" href="{{ asset('mazer/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css')}}">
     <link rel="stylesheet" href="{{ asset('mazer/dist/assets/css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('mazer/dist/assets/vendors/simple-datatables/style.css')}}">
     <link rel="shortcut icon" href="{{ asset('mazer/dist/assets/images/favicon.svg')}}" type="image/x-icon">
 </head>
 
@@ -50,15 +51,12 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a href="{{ route('addcategory') }}">Add Data</a>
-                                </li>
-                                <li class="submenu-item ">
-                                    <a href="component-badge.html">Edit</a>
+                                    <a href="{{ route('category.index') }}">Add Data</a>
                                 </li>
                             </ul>
                         </li>
 
- 
+
                     </ul>
                 </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
@@ -93,6 +91,17 @@
     <script src="{{ asset('mazer/dist/assets/js/pages/dashboard.js') }}"></script>
 
     <script src="{{ asset('mazer/dist/assets/js/main.js') }}"></script>
+    <script src="{{ asset('mazer/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js')}}"></script>
+    <script src="{{ asset('mazer/dist/assets/js/bootstrap.bundle.min.js')}}"></script>
+
+    <script src="{{ asset('mazer/dist/assets/vendors/simple-datatables/simple-datatables.js')}}"></script>
+    <script>
+        // Simple Datatable
+        let table1 = document.querySelector('#table1');
+        let dataTable = new simpleDatatables.DataTable(table1);
+    </script>
+
+    <script src="{{ asset('mazer/dist/assets/js/main.js')}}"></script>
 
 </body>
 
