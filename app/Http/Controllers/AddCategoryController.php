@@ -22,27 +22,6 @@ class AddCategoryController extends Controller
         return redirect()->route('category.index')->with('success', 'Category created successfully.');
     }
 
-    // Menampilkan form untuk mengedit kategori yang sudah ada
-    public function edit(Category $category)
-    {
-        return view('category.edit', compact('category')); // Pastikan nama view sesuai
-    }
-
-    // Memperbarui kategori yang sudah ada di database
-    public function update(CategoryRequest $request, Category $category)
-    {
-        $category->update($request->validated());
-
-        return redirect()->route('category.index')->with('success', 'Category updated successfully.');
-    }
-
-    // Menghapus kategori dari database
-    public function destroy(Category $category)
-    {
-        $category->delete();
-
-        return redirect()->route('category.index')->with('success', 'Category deleted successfully.');
-    }
 
     // Menampilkan daftar kategori (misalnya untuk tampilan indeks)
     public function index()

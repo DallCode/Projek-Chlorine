@@ -37,8 +37,10 @@ class CategoryRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required' => 'The name field is required.',
+            'name.required' => 'The category name is required.',
+            'name.max' => 'The category name must not exceed 255 characters.',
             'is_publish.required' => 'The publish status is required.',
+            'is_publish.boolean' => 'The publish status must be either true or false.',
         ];
     }
 }
